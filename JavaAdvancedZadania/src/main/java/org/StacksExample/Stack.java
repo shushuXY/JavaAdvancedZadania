@@ -8,11 +8,11 @@ public interface Stack  {
 
     public void push(String string) throws FullStackException;
 
-    public void pop();
+    public String pop() throws EmptyStackException;
 
-    public void peek();
+    public String peek() throws EmptyStackException;
 
-    public void isEmpty();
+    public boolean isEmpty();
 
 
 

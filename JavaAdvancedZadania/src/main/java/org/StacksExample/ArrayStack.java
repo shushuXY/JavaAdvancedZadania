@@ -1,36 +1,50 @@
 package org.StacksExample;
 
-public class ArrayStack implements Stack  {
+public class ArrayStack implements Stack {
 
-    int index = 0;
+    int index = -1; // initial top of stack
     String[] stackData = new String[100];
 
 
     @Override
-    public void push(String string) throws FullStackException {
-        if (index < 100) {
-            stackData[index] = string;
-            index++;
-        } else {
+    public void push(String element) throws FullStackException {
+        if (index >= 100) {
             throw new FullStackException();
+        } else {
+            stackData[++index] = element;
         }
     }
 
     @Override
-    public void pop() {
+    public String pop() throws EmptyStackException {
+        if (index < 0) {
+            throw new EmptyStackException();
+        } else {
+            String temp = stackData[index];
+            stackData[index--] = null;
+            return temp;
+        }
+    }
 
-        System.out.println(stackData[index]);
-        stackData[index] = null;
+    @Override
+    public String peek() throws EmptyStackException {
+        if (index < 0) {
+            throw new EmptyStackException();
+        } else {
+
+            return stackData[index];
+        }
+
 
     }
 
     @Override
-    public void peek() {
-
-    }
-
-    @Override
-    public void isEmpty() {
+    public boolean isEmpty() {
+        if (index < 0) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
