@@ -6,6 +6,7 @@ public class Main {
 
         ArrayStack myStack = new ArrayStack();
         ArrayStackInteger stackInteger = new ArrayStackInteger();
+        ArrayStackGenerics stackGenerics = new ArrayStackGenerics<String>();
 
         //testing push
         for (int i = 0 ; i<10; i++){
@@ -47,6 +48,8 @@ public class Main {
 
         //is empty check
         System.out.println(stackInteger.isEmpty());
+
+
 
 
 
