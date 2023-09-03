@@ -40,12 +40,7 @@ public class ArrayStack implements Stack {
 
     @Override
     public boolean isEmpty() {
-        if (index < 0) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return (index < 0);
     }
 
 

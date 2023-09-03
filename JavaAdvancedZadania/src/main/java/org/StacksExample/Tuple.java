@@ -1,12 +1,10 @@
 package org.StacksExample;
 
-public class Tuple <T> {
-
+public class Tuple<T> implements Comparable<T> {
     T left;
     T right;
 
-
-    public Tuple(T left, T right) {
+    public Tuple() {
         this.left = left;
         this.right = right;
     }
@@ -17,5 +15,11 @@ public class Tuple <T> {
 
     public T getRight() {
         return right;
+    }
+
+
+    @Override
+    public int compareTo(T t) {
+    return Integer.compare((Integer) this.left, (Integer) this.right);
     }
 }

@@ -6,7 +6,8 @@ public class Main {
 
         ArrayStack myStack = new ArrayStack();
         ArrayStackInteger stackInteger = new ArrayStackInteger();
-        ArrayStackGenerics stackGenerics = new ArrayStackGenerics<String>();
+        ArrayStackGenerics <String> stackGenerics = new ArrayStackGenerics<>();
+
 
         //testing push
         for (int i = 0 ; i<10; i++){

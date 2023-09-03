@@ -1,10 +1,9 @@
 package org.StacksExample;
 
-public class ArrayStackGenerics <T>  {
+public class ArrayStackGenerics<T> {
 
     int index = -1; // initial top of stack
-    T [] stackData = (T[]) new Object[100];
-
+    T[] stackData = (T[]) new Object[100];
 
 
     public void push(T element) throws FullStackException {
@@ -40,11 +39,9 @@ public class ArrayStackGenerics <T>  {
 
 
     public boolean isEmpty() {
-        if (index < 0) {
-            return true;
-        } else {
-            return false;
-        }
+
+            return (index<0);
+
 
     }
 
